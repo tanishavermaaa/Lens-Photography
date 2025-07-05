@@ -5,25 +5,24 @@ import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
 const photographers = [
   {
     name: "Adam Denison",
-    specialty: "Wildlife Photography",
+    specialty: "Wedding Photography",
     image:
-      "https://images.pexels.com/photos/32853860/pexels-photo-32853860.jpeg",
+      "https://images.pexels.com/photos/32830848/pexels-photo-32830848.jpeg",
     works: 124,
     followers: "12.5k",
   },
   {
     name: "Sarah Mitchell",
-    specialty: "Landscape Photography",
-    image:
-      "https://images.pexels.com/photos/10850704/pexels-photo-10850704.jpeg",
+    specialty: "Bridal Portraits",
+    image: "https://images.pexels.com/photos/5038559/pexels-photo-5038559.jpeg",
     works: 89,
     followers: "8.2k",
   },
   {
     name: "Marcus Chen",
-    specialty: "Portrait Photography",
+    specialty: "Ceremony Photography",
     image:
-      "https://images.pexels.com/photos/32866758/pexels-photo-32866758.jpeg",
+      "https://images.pexels.com/photos/19899977/pexels-photo-19899977.jpeg",
     works: 156,
     followers: "15.7k",
   },

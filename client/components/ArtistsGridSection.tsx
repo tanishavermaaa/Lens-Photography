@@ -2,15 +2,15 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 
 const artistImages = [
-  "https://images.pexels.com/photos/32866758/pexels-photo-32866758.jpeg",
-  "https://images.pexels.com/photos/10850704/pexels-photo-10850704.jpeg",
-  "https://images.pexels.com/photos/32803177/pexels-photo-32803177.jpeg",
-  "https://images.pexels.com/photos/32853860/pexels-photo-32853860.jpeg",
-  "https://images.pexels.com/photos/32866758/pexels-photo-32866758.jpeg",
-  "https://images.pexels.com/photos/10850704/pexels-photo-10850704.jpeg",
-  "https://images.pexels.com/photos/32803177/pexels-photo-32803177.jpeg",
-  "https://images.pexels.com/photos/32853860/pexels-photo-32853860.jpeg",
-  "https://images.pexels.com/photos/32866758/pexels-photo-32866758.jpeg",
+  "https://images.pexels.com/photos/27268887/pexels-photo-27268887.jpeg",
+  "https://images.pexels.com/photos/32830848/pexels-photo-32830848.jpeg",
+  "https://images.pexels.com/photos/30337239/pexels-photo-30337239.jpeg",
+  "https://images.pexels.com/photos/6119578/pexels-photo-6119578.jpeg",
+  "https://images.pexels.com/photos/5038559/pexels-photo-5038559.jpeg",
+  "https://images.pexels.com/photos/32841796/pexels-photo-32841796.jpeg",
+  "https://images.pexels.com/photos/6437094/pexels-photo-6437094.jpeg",
+  "https://images.pexels.com/photos/19899977/pexels-photo-19899977.jpeg",
+  "https://images.pexels.com/photos/2774081/pexels-photo-2774081.jpeg",
 ];
 
 export default function ArtistsGridSection() {

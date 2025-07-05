@@ -7,8 +7,8 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F7a415af69a664de19824c2561d4b2dbb%2Ffa649dccd43b402fa74b11eb47188294?format=webp&width=800"
-          alt="Beautiful flowers and nature"
+          src="https://images.pexels.com/photos/27268887/pexels-photo-27268887.jpeg"
+          alt="Beach Elopement Couples"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/30" />

@@ -63,8 +63,8 @@ export default function OneStopSection() {
           >
             <div className="aspect-[4/5] rounded-lg overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/32803177/pexels-photo-32803177.jpeg"
-                alt="Professional photography workspace"
+                src="https://images.pexels.com/photos/30337239/pexels-photo-30337239.jpeg"
+                alt="Wedding couple's hands showcasing wedding rings"
                 className="w-full h-full object-cover"
               />
             </div>

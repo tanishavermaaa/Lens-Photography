@@ -4,33 +4,31 @@ import { Calendar, MapPin, Users } from "lucide-react";
 
 const exhibitions = [
   {
-    title: "Nature's Symphony",
+    title: "Eternal Moments",
     description:
-      "A collection of stunning landscape photography from around the world",
+      "A collection of stunning wedding photography capturing love stories",
     date: "March 15 - April 30, 2024",
     location: "Digital Gallery",
     participants: 45,
-    image:
-      "https://images.pexels.com/photos/32866758/pexels-photo-32866758.jpeg",
+    image: "https://images.pexels.com/photos/6119578/pexels-photo-6119578.jpeg",
   },
   {
-    title: "Urban Stories",
-    description: "Street photography capturing the essence of city life",
+    title: "Wedding Venues",
+    description:
+      "Beautiful ceremony and reception venues from around the world",
     date: "April 1 - May 15, 2024",
     location: "Virtual Exhibition",
     participants: 32,
-    image:
-      "https://images.pexels.com/photos/32803177/pexels-photo-32803177.jpeg",
+    image: "https://images.pexels.com/photos/2788494/pexels-photo-2788494.jpeg",
   },
   {
-    title: "Portrait Masters",
-    description:
-      "Professional portraits showcasing human emotion and character",
+    title: "Bridal Elegance",
+    description: "Professional bridal portraits showcasing beauty and emotion",
     date: "May 1 - June 20, 2024",
     location: "Online Showcase",
     participants: 28,
     image:
-      "https://images.pexels.com/photos/10850704/pexels-photo-10850704.jpeg",
+      "https://images.pexels.com/photos/32841796/pexels-photo-32841796.jpeg",
   },
 ];
 
