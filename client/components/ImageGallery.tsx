@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 export default function ImageGallery() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div className="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
         {/* Large Featured Image */}
         <motion.div
           className="lg:col-span-2"
