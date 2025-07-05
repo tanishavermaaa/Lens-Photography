@@ -6,7 +6,8 @@ import { Calendar, MapPin, Users, Clock } from "lucide-react";
 const exhibitions = [
   {
     title: "Eternal Moments",
-    description: "A collection of stunning wedding photography capturing love stories from around the world",
+    description:
+      "A collection of stunning wedding photography capturing love stories from around the world",
     date: "March 15 - April 30, 2024",
     location: "Digital Gallery",
     participants: 45,
@@ -17,7 +18,8 @@ const exhibitions = [
   },
   {
     title: "Sacred Venues",
-    description: "Beautiful ceremony and reception venues showcasing architectural beauty",
+    description:
+      "Beautiful ceremony and reception venues showcasing architectural beauty",
     date: "April 1 - May 15, 2024",
     location: "Virtual Exhibition",
     participants: 32,
@@ -28,24 +30,28 @@ const exhibitions = [
   },
   {
     title: "Bridal Elegance",
-    description: "Professional bridal portraits showcasing beauty, emotion, and style",
+    description:
+      "Professional bridal portraits showcasing beauty, emotion, and style",
     date: "May 1 - June 20, 2024",
     location: "Online Showcase",
     participants: 28,
     visitors: "6.7k",
     status: "Coming Soon",
-    image: "https://images.pexels.com/photos/32841796/pexels-photo-32841796.jpeg",
+    image:
+      "https://images.pexels.com/photos/32841796/pexels-photo-32841796.jpeg",
     featured: false,
   },
   {
     title: "Love Stories",
-    description: "Intimate moments and candid emotions from real wedding celebrations",
+    description:
+      "Intimate moments and candid emotions from real wedding celebrations",
     date: "June 1 - July 15, 2024",
     location: "Premium Gallery",
     participants: 38,
     visitors: "0",
     status: "Coming Soon",
-    image: "https://images.pexels.com/photos/27268887/pexels-photo-27268887.jpeg",
+    image:
+      "https://images.pexels.com/photos/27268887/pexels-photo-27268887.jpeg",
     featured: false,
   },
 ];
@@ -54,32 +60,34 @@ export default function Exhibitions() {
   return (
     <div className="min-h-screen bg-stone-50">
       <MinimalHeader />
-      
+
       <div className="pt-20">
         {/* Hero Section */}
-        <motion.section 
+        <motion.section
           className="py-20 md:py-32 bg-white"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
           <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
-            <motion.h1 
+            <motion.h1
               className="text-4xl md:text-6xl font-light text-stone-800 mb-6"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Wedding <em className="font-serif italic text-amber-600">Exhibitions</em>
+              Wedding{" "}
+              <em className="font-serif italic text-amber-600">Exhibitions</em>
             </motion.h1>
-            <motion.p 
+            <motion.p
               className="text-xl text-stone-600 max-w-3xl mx-auto mb-12"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Curated collections of exceptional wedding photography, showcasing the finest work from our global community of artists.
-            </p>
+              Curated collections of exceptional wedding photography, showcasing
+              the finest work from our global community of artists.
+            </motion.p>
           </div>
         </motion.section>
 
@@ -94,7 +102,8 @@ export default function Exhibitions() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-light text-stone-800 mb-4">
-                Current & <span className="font-bold">Upcoming</span> Exhibitions
+                Current & <span className="font-bold">Upcoming</span>{" "}
+                Exhibitions
               </h2>
             </motion.div>
 
@@ -122,11 +131,13 @@ export default function Exhibitions() {
                           Featured
                         </span>
                       )}
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                        exhibition.status === 'Live' 
-                          ? 'bg-green-500 text-white' 
-                          : 'bg-blue-500 text-white'
-                      }`}>
+                      <span
+                        className={`px-3 py-1 rounded-full text-sm font-medium ${
+                          exhibition.status === "Live"
+                            ? "bg-green-500 text-white"
+                            : "bg-blue-500 text-white"
+                        }`}
+                      >
                         {exhibition.status}
                       </span>
                     </div>
@@ -163,7 +174,9 @@ export default function Exhibitions() {
                     </div>
 
                     <Button className="w-full bg-stone-800 hover:bg-stone-700 text-white">
-                      {exhibition.status === 'Live' ? 'View Exhibition' : 'Get Notified'}
+                      {exhibition.status === "Live"
+                        ? "View Exhibition"
+                        : "Get Notified"}
                     </Button>
                   </div>
                 </motion.div>
@@ -173,7 +186,7 @@ export default function Exhibitions() {
         </section>
 
         {/* CTA Section */}
-        <motion.section 
+        <motion.section
           className="py-20 bg-gradient-to-br from-amber-400 via-orange-500 to-purple-600"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -185,9 +198,13 @@ export default function Exhibitions() {
               Want to <span className="font-bold">exhibit</span> your work?
             </h2>
             <p className="text-lg text-white/90 mb-8">
-              Submit your wedding photography collection for consideration in our upcoming exhibitions.
+              Submit your wedding photography collection for consideration in
+              our upcoming exhibitions.
             </p>
-            <Button size="lg" className="bg-white text-purple-600 hover:bg-white/90 px-12 py-4">
+            <Button
+              size="lg"
+              className="bg-white text-purple-600 hover:bg-white/90 px-12 py-4"
+            >
               Submit Portfolio
             </Button>
           </div>
