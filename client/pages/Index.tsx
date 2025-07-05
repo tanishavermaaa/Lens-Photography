@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import UserBar from "../components/UserBar";
 import ImageGallery from "../components/ImageGallery";
 import Footer from "../components/Footer";
+import WorkGrid from "../components/WorkGrid";
 import { Avatar, AvatarImage, AvatarFallback } from "../components/ui/avatar";
 import { Button } from "../components/ui/button";
 import { MessageCircle } from "lucide-react";
@@ -139,32 +140,7 @@ export default function Index() {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {portfolioWorks.map((work, index) => (
-              <motion.div
-                key={work.id}
-                className="group cursor-pointer"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
-              >
-                <div className="aspect-[4/3] rounded-lg overflow-hidden bg-gray-100 mb-3">
-                  <img
-                    src={work.image}
-                    alt={work.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <h3 className="font-medium text-foreground mb-2 group-hover:text-accent-pink transition-colors">
-                  {work.title}
-                </h3>
-                <div className="flex items-center justify-between text-sm text-muted-foreground">
-                  <span>❤️ {work.likes}</span>
-                  <span>👁️ {work.views}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <WorkGrid works={portfolioWorks} delay={1.4} />
         </motion.div>
       </main>
 
