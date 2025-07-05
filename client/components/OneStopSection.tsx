@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
+import { useNavigate } from "react-router-dom";
 
 export default function OneStopSection() {
+  const navigate = useNavigate();
+
   return (
     <section className="py-20 md:py-32 bg-stone-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
@@ -39,19 +42,31 @@ export default function OneStopSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="bg-white text-stone-900 hover:bg-white/90 px-8 py-3"
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Start Exploring
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-stone-900 px-8 py-3"
+                <Button
+                  size="lg"
+                  className="bg-white text-stone-900 hover:bg-white/90 px-8 py-3"
+                  onClick={() => navigate("/gallery")}
+                >
+                  Start Exploring
+                </Button>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Join Community
-              </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-white hover:bg-white hover:text-stone-900 px-8 py-3"
+                  onClick={() => navigate("/join")}
+                >
+                  Join Community
+                </Button>
+              </motion.div>
             </div>
           </motion.div>
 
@@ -78,6 +93,10 @@ export default function OneStopSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
               viewport={{ once: true }}
+              animate={{ y: [0, -5, 0] }}
+              transition={{
+                y: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+              }}
             >
               <div className="text-center">
                 <div className="text-3xl font-bold text-amber-600">10K+</div>
@@ -91,6 +110,15 @@ export default function OneStopSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1 }}
               viewport={{ once: true }}
+              animate={{ y: [0, 5, 0] }}
+              transition={{
+                y: {
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1.5,
+                },
+              }}
             >
               <div className="text-center">
                 <div className="text-3xl font-bold">2M+</div>
