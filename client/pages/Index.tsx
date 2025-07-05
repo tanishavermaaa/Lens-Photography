@@ -53,12 +53,12 @@ export default function Index() {
       <main>
         {/* Page Title */}
         <motion.div
-          className="max-w-6xl mx-auto px-6 py-8"
+          className="max-w-6xl mx-auto px-4 md:px-6 py-6 md:py-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-2xl font-semibold text-foreground">
+          <h1 className="text-xl md:text-2xl font-semibold text-foreground leading-tight">
             Photography Portfolio Landing Page UI Design
           </h1>
         </motion.div>
@@ -68,22 +68,22 @@ export default function Index() {
 
         {/* Text Content Section */}
         <motion.div
-          className="max-w-4xl mx-auto px-6 py-16 text-center"
+          className="max-w-4xl mx-auto px-4 md:px-6 py-12 md:py-16 text-center"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <h2 className="text-3xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             Hello Dribbble 👋
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+          <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8 leading-relaxed">
             Presenting my latest landing page concept for a professional
             photography website. This design showcases clean aesthetics,
             intuitive navigation, and a focus on visual storytelling that helps
             photographers present their work in the most compelling way
             possible.
           </p>
-          <p className="text-base text-muted-foreground mb-8">
+          <p className="text-sm md:text-base text-muted-foreground mb-6 md:mb-8">
             Feel free to connect with me if you require any UX/UI Design
             Services:
           </p>
@@ -91,18 +91,18 @@ export default function Index() {
 
         {/* Author Section */}
         <motion.div
-          className="max-w-4xl mx-auto px-6 py-12 text-center"
+          className="max-w-4xl mx-auto px-4 md:px-6 py-8 md:py-12 text-center"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
         >
-          <div className="relative mb-8">
+          <div className="relative mb-6 md:mb-8">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-border-light"></div>
             </div>
             <div className="relative flex justify-center">
               <div className="bg-white px-4">
-                <Avatar className="h-16 w-16">
+                <Avatar className="h-14 w-14 md:h-16 md:w-16">
                   <AvatarImage
                     src="https://images.pexels.com/photos/32853860/pexels-photo-32853860.jpeg"
                     alt="Zeeshan Ali"
@@ -112,7 +112,7 @@ export default function Index() {
               </div>
             </div>
           </div>
-          <h3 className="text-xl font-semibold text-foreground mb-4">
+          <h3 className="text-lg md:text-xl font-semibold text-foreground mb-4">
             Zeeshan Ali
           </h3>
           <Button className="bg-accent-dark hover:bg-accent-dark/90 text-white">
@@ -123,18 +123,18 @@ export default function Index() {
 
         {/* More Works Section */}
         <motion.div
-          className="max-w-6xl mx-auto px-6 py-16"
+          className="max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-16"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-semibold text-foreground">
+          <div className="flex items-center justify-between mb-6 md:mb-8">
+            <h2 className="text-xl md:text-2xl font-semibold text-foreground">
               More by Zeeshan Ali
             </h2>
             <a
               href="#"
-              className="text-accent-pink hover:text-accent-pink/80 font-medium transition-colors"
+              className="text-accent-pink hover:text-accent-pink/80 font-medium transition-colors text-sm md:text-base"
             >
               View profile
             </a>
