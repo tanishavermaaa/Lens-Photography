@@ -27,13 +27,15 @@ export default function OneStopSection() {
               <br />
               FOR
               <br />
-              <em className="font-serif italic text-amber-200">Photography</em>
+              <em className="font-serif italic text-amber-200">
+                Wedding Photography
+              </em>
             </h2>
 
             <p className="text-lg text-white/80 mb-8 leading-relaxed">
               Discover, connect, and showcase your work in the world's most
-              comprehensive photography community. From emerging talents to
-              established masters, find inspiration at every turn.
+              comprehensive wedding photography community. From emerging talents
+              to established masters, find inspiration for every love story.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

@@ -26,7 +26,7 @@ export default function HeroSection() {
             >
               The Beauty
               <br />
-              of <em className="font-serif italic text-amber-200">Nature</em>
+              of <em className="font-serif italic text-amber-200">Love</em>
               <br />
               on <span className="font-bold">Display</span>
             </motion.h1>
@@ -37,9 +37,9 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Discover the extraordinary in the ordinary through the lens of
-              talented photographers capturing nature's most breathtaking
-              moments.
+              Discover the extraordinary moments of love through the lens of
+              talented photographers capturing weddings' most breathtaking and
+              intimate moments.
             </motion.p>
 
             <motion.div

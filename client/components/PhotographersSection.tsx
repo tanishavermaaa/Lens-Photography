@@ -40,11 +40,13 @@ export default function PhotographersSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-stone-800 mb-4">
-            Meet the <em className="font-serif italic">Photographers</em>
+            Meet the{" "}
+            <em className="font-serif italic">Wedding Photographers</em>
           </h2>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto">
             Discover the talented artists behind the lens, each bringing their
-            unique perspective and passion to the world of photography.
+            unique perspective and passion to capturing love stories and wedding
+            moments.
           </p>
         </motion.div>
 
