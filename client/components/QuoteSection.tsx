@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function QuoteSection() {
   return (
-    <section className="py-20 md:py-32 bg-stone-50">
+    <section className="py-16 md:py-25 bg-stone-50">
       <div className="max-w-6xl mx-auto px-4 md:px-6 text-center">
         <motion.div
           className="relative"
@@ -33,11 +33,8 @@ export default function QuoteSection() {
               viewport={{ once: true }}
             >
               {[
-                "THE BEST THING",
-                "ABOUT A PICTURE",
-                "IS THAT IT NEVER",
-                "CHANGES, EVEN",
-                "WHEN THE",
+                "THE BEST THING ABOUT A PICTURE IS THAT",
+                "IT NEVER CHANGES, EVEN WHEN THE ",
                 "PEOPLE IN IT DO.",
               ].map((line, index) => (
                 <motion.span
