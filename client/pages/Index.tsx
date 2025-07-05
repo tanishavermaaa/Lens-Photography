@@ -1,62 +1,174 @@
-import { DemoResponse } from "@shared/api";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import Header from "../components/Header";
+import UserBar from "../components/UserBar";
+import ImageGallery from "../components/ImageGallery";
+import Footer from "../components/Footer";
+import { Avatar, AvatarImage, AvatarFallback } from "../components/ui/avatar";
+import { Button } from "../components/ui/button";
+import { MessageCircle } from "lucide-react";
+
+const portfolioWorks = [
+  {
+    id: 1,
+    image:
+      "https://images.pexels.com/photos/32866758/pexels-photo-32866758.jpeg",
+    title: "Nature Photography Collection",
+    likes: 124,
+    views: "2.1k",
+  },
+  {
+    id: 2,
+    image:
+      "https://images.pexels.com/photos/10850704/pexels-photo-10850704.jpeg",
+    title: "Portrait Studio Sessions",
+    likes: 89,
+    views: "1.5k",
+  },
+  {
+    id: 3,
+    image:
+      "https://images.pexels.com/photos/32803177/pexels-photo-32803177.jpeg",
+    title: "Architecture & Urban",
+    likes: 156,
+    views: "3.2k",
+  },
+  {
+    id: 4,
+    image:
+      "https://images.pexels.com/photos/32853860/pexels-photo-32853860.jpeg",
+    title: "Fashion Photography",
+    likes: 203,
+    views: "4.8k",
+  },
+];
 
 export default function Index() {
-  const [exampleFromServer, setExampleFromServer] = useState("");
-  // Fetch users on component mount
-  useEffect(() => {
-    fetchDemo();
-  }, []);
-
-  // Example of how to fetch data from the server (if needed)
-  const fetchDemo = async () => {
-    try {
-      const response = await fetch("/api/demo");
-      const data = (await response.json()) as DemoResponse;
-      setExampleFromServer(data.message);
-    } catch (error) {
-      console.error("Error fetching hello:", error);
-    }
-  };
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
-      <div className="text-center">
-        {/* TODO: FUSION_GENERATION_APP_PLACEHOLDER replace everything here with the actual app! */}
-        <h1 className="text-2xl font-semibold text-slate-800 flex items-center justify-center gap-3">
-          <svg
-            className="animate-spin h-8 w-8 text-slate-400"
-            viewBox="0 0 50 50"
-          >
-            <circle
-              className="opacity-30"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-            />
-            <circle
-              className="text-slate-600"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-              strokeDasharray="100"
-              strokeDashoffset="75"
-            />
-          </svg>
-          Generating your app...
-        </h1>
-        <p className="mt-4 text-slate-600 max-w-md">
-          Watch the chat on the left for updates that might need your attention
-          to finish generating
-        </p>
-        <p className="mt-4 hidden max-w-md">{exampleFromServer}</p>
-      </div>
+    <div className="min-h-screen bg-white">
+      <Header />
+      <UserBar />
+
+      {/* Main Content */}
+      <main>
+        {/* Page Title */}
+        <motion.div
+          className="max-w-6xl mx-auto px-6 py-8"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-2xl font-semibold text-foreground">
+            Photography Portfolio Landing Page UI Design
+          </h1>
+        </motion.div>
+
+        {/* Image Gallery */}
+        <ImageGallery />
+
+        {/* Text Content Section */}
+        <motion.div
+          className="max-w-4xl mx-auto px-6 py-16 text-center"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <h2 className="text-3xl font-bold text-foreground mb-6">
+            Hello Dribbble 👋
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            Presenting my latest landing page concept for a professional
+            photography website. This design showcases clean aesthetics,
+            intuitive navigation, and a focus on visual storytelling that helps
+            photographers present their work in the most compelling way
+            possible.
+          </p>
+          <p className="text-base text-muted-foreground mb-8">
+            Feel free to connect with me if you require any UX/UI Design
+            Services:
+          </p>
+        </motion.div>
+
+        {/* Author Section */}
+        <motion.div
+          className="max-w-4xl mx-auto px-6 py-12 text-center"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+        >
+          <div className="relative mb-8">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-border-light"></div>
+            </div>
+            <div className="relative flex justify-center">
+              <div className="bg-white px-4">
+                <Avatar className="h-16 w-16">
+                  <AvatarImage
+                    src="https://images.pexels.com/photos/32853860/pexels-photo-32853860.jpeg"
+                    alt="Zeeshan Ali"
+                  />
+                  <AvatarFallback>ZA</AvatarFallback>
+                </Avatar>
+              </div>
+            </div>
+          </div>
+          <h3 className="text-xl font-semibold text-foreground mb-4">
+            Zeeshan Ali
+          </h3>
+          <Button className="bg-accent-dark hover:bg-accent-dark/90 text-white">
+            <MessageCircle className="h-4 w-4 mr-2" />
+            Get in touch
+          </Button>
+        </motion.div>
+
+        {/* More Works Section */}
+        <motion.div
+          className="max-w-6xl mx-auto px-6 py-16"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+        >
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-2xl font-semibold text-foreground">
+              More by Zeeshan Ali
+            </h2>
+            <a
+              href="#"
+              className="text-accent-pink hover:text-accent-pink/80 font-medium transition-colors"
+            >
+              View profile
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {portfolioWorks.map((work, index) => (
+              <motion.div
+                key={work.id}
+                className="group cursor-pointer"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
+              >
+                <div className="aspect-[4/3] rounded-lg overflow-hidden bg-gray-100 mb-3">
+                  <img
+                    src={work.image}
+                    alt={work.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <h3 className="font-medium text-foreground mb-2 group-hover:text-accent-pink transition-colors">
+                  {work.title}
+                </h3>
+                <div className="flex items-center justify-between text-sm text-muted-foreground">
+                  <span>❤️ {work.likes}</span>
+                  <span>👁️ {work.views}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </main>
+
+      <Footer />
     </div>
   );
 }
