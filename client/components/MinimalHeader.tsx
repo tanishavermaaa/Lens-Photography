@@ -124,41 +124,53 @@ export default function MinimalHeader() {
           transition={{ duration: 0.3 }}
         >
           <div className="px-4 py-6 space-y-4">
-            <a
-              href="#gallery"
+            <Link
+              to="/gallery"
               className="block text-stone-700 hover:text-amber-500 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Gallery
-            </a>
-            <a
-              href="#photographers"
+            </Link>
+            <Link
+              to="/artists"
               className="block text-stone-700 hover:text-amber-500 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Artists
-            </a>
-            <a
-              href="#exhibitions"
+            </Link>
+            <Link
+              to="/exhibitions"
               className="block text-stone-700 hover:text-amber-500 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Exhibitions
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <Link
+              to="/about"
               className="block text-stone-700 hover:text-amber-500 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               About
-            </a>
+            </Link>
             <div className="pt-4 space-y-3">
-              <Button variant="outline" size="sm" className="w-full">
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full"
+                onClick={() => {
+                  navigate("/signin");
+                  setIsMenuOpen(false);
+                }}
+              >
                 Sign In
               </Button>
               <Button
                 size="sm"
                 className="w-full bg-amber-500 hover:bg-amber-600 text-white"
+                onClick={() => {
+                  navigate("/join");
+                  setIsMenuOpen(false);
+                }}
               >
                 Join Now
               </Button>

@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
+  const navigate = useNavigate();
+
   return (
     <section className="relative h-screen overflow-hidden">
       {/* Background Image */}
@@ -48,19 +51,31 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
-              <Button
-                size="lg"
-                className="bg-white text-black hover:bg-white/90 px-8 py-3 text-lg font-medium"
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Explore Gallery
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-black px-8 py-3 text-lg font-medium"
+                <Button
+                  size="lg"
+                  className="bg-white text-black hover:bg-white/90 px-8 py-3 text-lg font-medium"
+                  onClick={() => navigate("/gallery")}
+                >
+                  Explore Gallery
+                </Button>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Meet Artists
-              </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-black bg-white hover:bg-white/90 hover:text-black px-8 py-3 text-lg font-medium"
+                  onClick={() => navigate("/artists")}
+                >
+                  Meet Artists
+                </Button>
+              </motion.div>
             </motion.div>
           </div>
         </div>
